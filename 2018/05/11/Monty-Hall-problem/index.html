@@ -16,7 +16,7 @@
 <meta property="og:description" content="1.问题Monty Hall problem 衍生过许多版本，现写进了高中数学教科书思考题，在网上讨论也颇多，但目前看到的结论多数不赞同，或者是被限制了条件。下面来看一下这个悖论的原始版本：  Monty Hall 是美国一个电视游戏节目的主持人，你是参赛者。你面对三扇门(A,B,C)，其中一扇门的后面是汽车，另外两扇门后面是山羊，你的目标是赢得汽车。你随机选择一扇门(假设你选择了A)，这时主持人">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://zijian.studio/2018/05/11/Monty-Hall-problem/Monty_open_door.png">
-<meta property="og:updated_time" content="2018-05-13T12:19:21.411Z">
+<meta property="og:updated_time" content="2018-05-13T13:28:21.071Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="不要小瞧了 Monty Hall problem(三门问题)">
 <meta name="twitter:description" content="1.问题Monty Hall problem 衍生过许多版本，现写进了高中数学教科书思考题，在网上讨论也颇多，但目前看到的结论多数不赞同，或者是被限制了条件。下面来看一下这个悖论的原始版本：  Monty Hall 是美国一个电视游戏节目的主持人，你是参赛者。你面对三扇门(A,B,C)，其中一扇门的后面是汽车，另外两扇门后面是山羊，你的目标是赢得汽车。你随机选择一扇门(假设你选择了A)，这时主持人">
@@ -116,6 +116,7 @@
 <li>x = 0, y = 0: 会导致不存在打开另一扇门的情况，不合理。</li>
 </ul>
 <p>根据贝叶斯公式：</p>
+<p>$$a+b=c$$</p>
 <p>$$\begin{equation}\begin{aligned}<br>P(汽车在A|打开C是羊) &amp;= \frac{P(汽车在A)P(打开C是羊|汽车在A)}{P(打开C是羊)} \\<br>&amp;= \frac{P(汽车在A)P(打开C是羊|汽车在A)}{P(打开C是羊|汽车在A)P(汽车在A)+P(打开C是羊|汽车不在A)P(汽车不在A)} \\<br>&amp;= \frac{\frac{1}{3}\cdot x\cdot\frac{1}{2}}{\frac{1}{3}\cdot x\cdot\frac{1}{2}+\frac{2}{3}\cdot y\cdot\frac{1}{2}} \\<br>&amp;= \frac{1}{1+\frac{2y}{x}}<br>\end{aligned}\end{equation}$$</p>
 <p>可见，不换门赢得汽车的概率，只与y与x的比例有关，下面是x, y在[0,1]范围内的热度图像</p>
 <p><canvas id="canvas"><br></canvas></p>
@@ -184,7 +185,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zijian.studio/2018/05/11/Monty-Hall-problem/" data-id="cjh4taw1f000040s71nh3ct4x" class="article-share-link">Share</a>
+      <a data-url="http://zijian.studio/2018/05/11/Monty-Hall-problem/" data-id="cjh4uzw1m00006ss7znfb8nln" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/概率/">概率</a></li></ul>
@@ -272,7 +273,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2018 Zijian<br>
+      &copy; 2018 ZIJIAN<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
