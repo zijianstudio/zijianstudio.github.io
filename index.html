@@ -69,98 +69,61 @@
     <article id="post-Monty-Hall-problem" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/05/11/Monty-Hall-problem/" class="article-date">
-  <time datetime="2018-05-11T11:37:11.000Z" itemprop="datePublished">2018-05-11</time>
+  <time datetime="2018-05-11T11:37:11.104Z" itemprop="datePublished">2018-05-11</time>
 </a>
     
   </div>
   <div class="article-inner">
     
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/05/11/Monty-Hall-problem/">不要小瞧了 Monty Hall problem(三门问题)</a>
-    </h1>
-  
-
-      </header>
-    
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="1-问题"><a href="#1-问题" class="headerlink" title="1.问题"></a>1.问题</h2><p>Monty Hall problem 衍生过许多版本，写进过高中数学教科书思考题，在网上讨论也颇多，但目前看到的结论多数不赞同，或者是被限制了条件。下面来看一下这个悖论的原始版本：</p>
+        <h1 id="1-问题"><a href="#1-问题" class="headerlink" title="1.问题"></a>1.问题</h1><p>Monty Hall problem 衍生过许多版本，写进过高中数学教科书思考题，在网上讨论也颇多，但目前看到的结论多数不赞同，或者是被限制了条件。下面来看一下这个悖论的原始版本：</p>
 <blockquote>
 <p>Monty Hall 是美国一个电视游戏节目的主持人，你是参赛者。你面对三扇门(A,B,C)，其中一扇门的后面是汽车，另外两扇门后面是山羊，你的目标是赢得汽车。你随机选择一扇门(假设你选择了A)，这时主持人打开了C，C后面是一只山羊，并给你一次重新选择的机会。现在汽车只可能在A和B中，你该不该换门，汽车在A和B后面的概率各是多少？</p>
 </blockquote>
-<p><img src="/2018/05/11/Monty-Hall-problem/Monty_open_door.png" alt=""></p>
-<h2 id="2-思考"><a href="#2-思考" class="headerlink" title="2.思考"></a>2.思考</h2><p>不同的人有不同的思考方式，主要集中在以下几种：</p>
+<p><img src="/2018/05/11/Monty-Hall-problem/Monty_open_door.png" alt="选1号还是选2号？" title="选1号还是选2号？"></p>
+<h1 id="2-思考"><a href="#2-思考" class="headerlink" title="2.思考"></a>2.思考</h1><p>不同的人有不同的思考方式，主要集中在以下几种：</p>
 <ul>
-<li><p>佛性思考法：<br>只剩下两个门了，那么这时候汽车在A或B后面的概率是平等的，换不换无所谓。</p>
+<li><p>佛性思考法：只剩下两个门了，那么这时候汽车在A或B后面的概率是平等的，换不换无所谓。</p>
 </li>
 <li><p>反选法：三个门选一个获奖率是1/3，但如果让你同时选两个门就是2/3这是毫无疑问的，你是一个心机girl，心里选了B+C，嘴上对主持人说选A，之后不管她从B或C打开哪一个门(后面是羊)，都相当于为你排除了多数中的错误答案，你间接选择了B+C，所以换门的概率更大，为2/3，不换的概率1/3，这是网上最常见的答案，证明方式各有不同，但事实真如此吗？</p>
 </li>
-<li><p>经验法：祖先告诉了我们经验的重要性，你在不知是否换门的之际，掏出手机google了 Monty Hall，发现了她的黑历史，原来，她只在参赛者第一次选对时，才故意打开另一扇门迷惑你。之前所有和你一样参加这个节目的人，凡是第二次换门，最后都空手而归，看到这里后你还坚持换门吗？</p>
+<li><p>经验法：祖先告诉了我们经验的重要性，你在不知是否换门之际，掏出手机google了 Monty Hall，发现了她的黑历史，原来，她只在参赛者第一次选对时，才故意打开另一扇门迷惑你。之前所有和你一样参加这个节目的人，凡是第二次换门，最后都空手而归，看到这里后你还坚持换门吗？</p>
 </li>
 </ul>
-<h2 id="3-为什么会有悖论"><a href="#3-为什么会有悖论" class="headerlink" title="3.为什么会有悖论"></a>3.为什么会有悖论</h2><p>除了问题描述本身，还有一个关键之处：<strong>Monty Hall 打开另一扇门的动机。</strong>这个问题实际是一个缺少<strong>先验概率</strong>的<strong>条件概率</strong>问题。不妨我们给它补上： Monty Hall 在你第一次选对的情况下打开另一扇门的概率是 x，在你选错的情况下打开另一扇门的概率是 y，这道题才能计算正确答案！现在我们来算一算，当 x, y 符合什么情况该换门，什么情况不该换。</p>
+<h1 id="3-为什么会有悖论？"><a href="#3-为什么会有悖论？" class="headerlink" title="3.为什么会有悖论？"></a>3.为什么会有悖论？</h1><p>除了问题描述本身，还有一个关键之处：<strong>Monty Hall 打开另一扇门的动机</strong>。这个问题实际是一个缺少<strong>先验概率</strong>的<strong>条件概率</strong>问题。不妨我们给它补上： Monty Hall 在你选对的情况下打开另一扇门的概率是 x，在你选错的情况下打开另一扇门的概率是 y，这道题才能计算正确答案！现在我们来算一算，当 x, y 符合什么情况该换门，什么情况不该换。</p>
 <p>先考虑极端情况：</p>
 <ul>
-<li>x = y = 1: 必须换！参考反选法。</li>
-<li>x = 1, y = 0: 必须不换！参考经验法。 </li>
+<li>x = y = 1: 应该换！参考反选法。</li>
+<li>x = 1, y = 0: 必须不换！参考经验法。</li>
 <li>x = 0, y = 1: 请问这个福利节目现在还有么。</li>
 <li>x = 0, y = 0: 会导致不存在打开另一扇门的情况，不合理。</li>
 </ul>
 <p>根据贝叶斯公式：</p>
-<p><img src="/2018/05/11/Monty-Hall-problem/bayes.png" alt=""></p>
+<p><img src="/2018/05/11/Monty-Hall-problem/bayes.svg" alt="贝叶斯公式" title="贝叶斯公式"></p>
 <p>可见，不换门赢得汽车的概率，只与y与x的比例有关，下面是x, y在[0,1]范围内的热度图像</p>
-<p><canvas id="canvas">
-</canvas></p>
-<script>
-    window.onload = function(){
-        var canvas = document.getElementById("canvas");
-        var length = 256;
-        var margin = 40;
-        canvas.width = length+margin*2;
-        canvas.height = length+margin*2;
-        var context = canvas.getContext("2d");
-
-        for(var i=1;i<=256;i++){
-            for(var j=1;j<=256;j++){
-                var color=Math.floor(256*i/(i+2*j));
-                context.beginPath();
-                if(i===2*j){
-                    context.fillStyle = 'black';    
-                }else{
-                    context.fillStyle = `rgb(${256-color},${color},0)`;    
-                }
-                context.fillRect(margin+i-1,margin+length-j,1,1);
-            }
-        }
-        context.fill();
-        context.strokeText("0",margin-10,margin+length+10);
-        context.strokeText("x",margin+length/2-10,margin+length+10);
-        context.strokeText("1",margin+length-10,margin+length+10);
-        context.strokeText("y",margin-10,margin+length/2);
-        context.strokeText("1",margin-10,margin);
-    }
-</script>
-
+<p><img src="/2018/05/11/Monty-Hall-problem/canvas1.png" alt="水平轴为第一次选对主持人打开另一扇门的概率，垂直轴为第一次选错主持人打开另一扇门的概率" title="水平轴为第一次选对主持人打开另一扇门的概率，垂直轴为第一次选错主持人打开另一扇门的概率"></p>
 <ul>
 <li>y/x 越小，越靠近绿色，汽车在A的概率越接近1，不应该换；</li>
 <li>y/x 越大，越靠近红色，汽车在A的概率越接近0，应该换；</li>
 <li>在图中的黑线 y=0.5x 上，换与不换概率均为0.5</li>
 </ul>
-<h2 id="5-Python-验证"><a href="#5-Python-验证" class="headerlink" title="5.Python 验证"></a>5.Python 验证</h2><p>令 x = 0.4, y = 0.5, 计算得 p = 2/7<br><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"></span><br><span class="line">__author__ = <span class="string">'zijian'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">monty_hall_problem</span><span class="params">(max_trial)</span>:</span></span><br><span class="line">    done = <span class="keyword">False</span></span><br><span class="line">    total_car_in_A = <span class="number">0</span></span><br><span class="line">    total_trial = <span class="number">0</span></span><br><span class="line">    <span class="comment">#Monty Hall 问题大量发生，每一次选A</span></span><br><span class="line">    <span class="keyword">while</span> <span class="keyword">not</span> done:</span><br><span class="line">        <span class="comment">#用1，2，3表示汽车在A，B，C</span></span><br><span class="line">        car_behind_door = random.randint(<span class="number">1</span>,<span class="number">3</span>)    </span><br><span class="line">        <span class="keyword">if</span> car_behind_door == <span class="number">1</span>:</span><br><span class="line">            <span class="comment">#有0.4概率开另一扇门，此时不换会赢得汽车</span></span><br><span class="line">            <span class="keyword">if</span> random.random() &lt; <span class="number">0.4</span>:</span><br><span class="line">               total_car_in_A += <span class="number">1</span></span><br><span class="line">               total_trial += <span class="number">1</span></span><br><span class="line">            <span class="comment">#否则不开门，不符合条件</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">continue</span></span><br><span class="line">        <span class="comment">#有0.5概率开另一扇门，此时不换赢不到</span></span><br><span class="line">        <span class="keyword">elif</span> random.random() &lt; <span class="number">0.5</span>:</span><br><span class="line">            total_trial += <span class="number">1</span></span><br><span class="line">        <span class="comment">#同样，不符合条件</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line">        <span class="keyword">if</span> total_trial &gt;= max_trial:</span><br><span class="line">            done = <span class="keyword">True</span></span><br><span class="line">    <span class="keyword">return</span> total_car_in_A / total_trial</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">5</span>):</span><br><span class="line">        p=monty_hall_problem(<span class="number">1000000</span>)</span><br><span class="line">        print(<span class="string">"第%s次百万数量下，汽车在A门后的几率为：%s"</span>%(i+<span class="number">1</span>,p))</span><br><span class="line">    print(<span class="string">"我是占位符~我是占位符~我是占位符2/7：%s"</span>%(<span class="number">2</span>/<span class="number">7</span>))</span><br></pre></td></tr></table></figure></p>
-<p>上述代码执行后的结果如下：<br><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">第<span class="number">1</span>次百万数量下，汽车在A门后的几率为：<span class="number">0.285932</span></span><br><span class="line">第<span class="number">2</span>次百万数量下，汽车在A门后的几率为：<span class="number">0.285071</span></span><br><span class="line">第<span class="number">3</span>次百万数量下，汽车在A门后的几率为：<span class="number">0.285774</span></span><br><span class="line">第<span class="number">4</span>次百万数量下，汽车在A门后的几率为：<span class="number">0.285495</span></span><br><span class="line">第<span class="number">5</span>次百万数量下，汽车在A门后的几率为：<span class="number">0.285691</span></span><br><span class="line">我是占位符~我是占位符~我是占位符<span class="number">2</span>/<span class="number">7</span>：<span class="number">0.2857142857142857</span></span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure></p>
+<h1 id="4-Python-验证"><a href="#4-Python-验证" class="headerlink" title="4.Python 验证"></a>4.Python 验证</h1><p>利用random随机数，制造出随机的五组x, y 计算理论概率，并模拟实际几率</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"></span><br><span class="line">__author__ = <span class="string">'zijian'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">monty_hall_problem</span><span class="params">(max_trial, x, y)</span>:</span></span><br><span class="line">    done = <span class="keyword">False</span></span><br><span class="line">    total_car_in_A = <span class="number">0</span></span><br><span class="line">    total_trial = <span class="number">0</span></span><br><span class="line">    <span class="comment">#Monty Hall 问题大量发生，每一次选A</span></span><br><span class="line">    <span class="keyword">while</span> <span class="keyword">not</span> done:</span><br><span class="line">        <span class="comment">#用1，2，3表示汽车在A，B，C</span></span><br><span class="line">        car_behind_door = random.randint(<span class="number">1</span>,<span class="number">3</span>)    </span><br><span class="line">        <span class="keyword">if</span> car_behind_door == <span class="number">1</span>:</span><br><span class="line">            <span class="comment">#有x概率开另一扇门，此时不换会赢得汽车</span></span><br><span class="line">            <span class="keyword">if</span> random.random() &lt; x:</span><br><span class="line">               total_car_in_A += <span class="number">1</span></span><br><span class="line">               total_trial += <span class="number">1</span></span><br><span class="line">            <span class="comment">#否则不开门，不符合条件</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">continue</span></span><br><span class="line">        <span class="comment">#有y概率开另一扇门，此时不换赢不到</span></span><br><span class="line">        <span class="keyword">elif</span> random.random() &lt; y:</span><br><span class="line">            total_trial += <span class="number">1</span></span><br><span class="line">        <span class="comment">#同样，不符合条件</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line">        <span class="keyword">if</span> total_trial &gt;= max_trial:</span><br><span class="line">            done = <span class="keyword">True</span></span><br><span class="line">    <span class="keyword">return</span> total_car_in_A / total_trial</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">5</span>):</span><br><span class="line">        <span class="comment">#随机选5组随机数</span></span><br><span class="line">        x = random.random()</span><br><span class="line">        y = random.random()</span><br><span class="line">        <span class="comment">#理论值</span></span><br><span class="line">        p0 = x /(x + <span class="number">2</span> * y)</span><br><span class="line">        <span class="comment">#实际值</span></span><br><span class="line">        p = monty_hall_problem(<span class="number">1000000</span>, x, y)</span><br><span class="line">        print(<span class="string">"第%s次随机x = %s, y = %s，理论概率 x/(x + 2y)：%s"</span>%(i+<span class="number">1</span>, x, y, p0))</span><br><span class="line">        print(<span class="string">"第%s次百万数量模拟下，汽车在A门后的几率为：%s，相对误差为%s%%"</span> % (i+<span class="number">1</span>, p, <span class="number">100</span>*(p - p0)/ p0))</span><br></pre></td></tr></table></figure>
+<p>上述代码执行后的结果如下：</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">第<span class="number">1</span>次随机x = <span class="number">0.4861871788241564</span>, y = <span class="number">0.12591280082723066</span>，理论概率 x/(x + <span class="number">2</span>y)：<span class="number">0.6587788066608457</span></span><br><span class="line">第<span class="number">1</span>次百万数量模拟下，不换门赢的几率为：<span class="number">0.658873</span>，相对误差为<span class="number">0.014298173863823812</span>%</span><br><span class="line">第<span class="number">2</span>次随机x = <span class="number">0.07298868281286575</span>, y = <span class="number">0.5447049643017904</span>，理论概率 x/(x + <span class="number">2</span>y)：<span class="number">0.06279144012734585</span></span><br><span class="line">第<span class="number">2</span>次百万数量模拟下，不换门赢的几率为：<span class="number">0.062931</span>，相对误差为<span class="number">0.22225939136149226</span>%</span><br><span class="line">第<span class="number">3</span>次随机x = <span class="number">0.42103934207411153</span>, y = <span class="number">0.6491863485255072</span>，理论概率 x/(x + <span class="number">2</span>y)：<span class="number">0.24487402233634786</span></span><br><span class="line">第<span class="number">3</span>次百万数量模拟下，不换门赢的几率为：<span class="number">0.24544</span>，相对误差为<span class="number">0.23113013714240673</span>%</span><br><span class="line">第<span class="number">4</span>次随机x = <span class="number">0.6276282895713531</span>, y = <span class="number">0.5662725903978403</span>，理论概率 x/(x + <span class="number">2</span>y)：<span class="number">0.3565718380248506</span></span><br><span class="line">第<span class="number">4</span>次百万数量模拟下，不换门赢的几率为：<span class="number">0.356352</span>，相对误差为<span class="number">-0.06165322142890953</span>%</span><br><span class="line">第<span class="number">5</span>次随机x = <span class="number">0.6709303930216155</span>, y = <span class="number">0.7945710048946582</span>，理论概率 x/(x + <span class="number">2</span>y)：<span class="number">0.2968623448466322</span></span><br><span class="line">第<span class="number">5</span>次百万数量模拟下，不换门赢的几率为：<span class="number">0.296592</span>，相对误差为<span class="number">-0.09106740929768469</span>%</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
 <p>可见与预期结果一致。</p>
-<h2 id="5-这就结束了？"><a href="#5-这就结束了？" class="headerlink" title="5.这就结束了？"></a>5.这就结束了？</h2><p>看到这里，你根据节目历史，估算出了x，y，之后通过计算比较了换与不换的概率的大小，去参加节目，是否必有超过一半概率赢回汽车？</p>
+<h1 id="5-这就结束了？"><a href="#5-这就结束了？" class="headerlink" title="5.这就结束了？"></a>5.这就结束了？</h1><p>看到这里，你根据节目历史，估算出了x，y，之后通过计算比较了换与不换的概率的大小，去参加节目，是否必有超过一半概率赢回汽车？</p>
 <p>答案：当然不是！因为这是一个<strong>条件概率</strong>问题，你不能保证你去参加节目一定会达成条件。很可能你第一次选错直接 GAME OVER 了。</p>
 <p>既然这样计算上面概率还有什么意义呢？我们已经得出这个结论了不是：如果 Monty Hall 打开另一扇门，给我们一次换门的机会，x&gt;2y 时选择不换，否则选择换。所以，还需一步就可以推导不含条件的全概率公式：</p>
-<p><img src="/2018/05/11/Monty-Hall-problem/probability_win.png" alt=""></p>
+<p><img src="/2018/05/11/Monty-Hall-problem/probability_win.svg" alt="不同条件下的全概率公式" title="不同条件下的全概率公式"></p>
 <p>化简①式，结果为：1/3,<br>化简②式，结果为：(1+2y-x)/3</p>
+<p>下面是全概率下的热度图像</p>
+<p><img src="/2018/05/11/Monty-Hall-problem/canvas2.png" alt="还是有必要解释一下，这个图片是参加比赛之前根据x，y，计算得到最可能赢得汽车的概率；举个例子，x=0,y=0.25，如果提供了换门机会，那换门胜率将是100%，因为你若第一次选对主持人根本不会开另一扇门！但你无法在比赛前确定会有换门机会，所以综合胜率是50%" title="还是有必要解释一下，这个图片是参加比赛之前根据x，y，计算得到最可能赢得汽车的概率；举个例子，x=0,y=0.25，如果提供了换门机会，那换门胜率将是100%，因为你若第一次选对主持人根本不会开另一扇门！但你无法在比赛前确定会有换门机会，所以综合胜率是50%"></p>
 <p>这个结果是符合常理的，仅当x=0，y=1情况，参赛者必赢（要么第一次选对直接赢得汽车，要么第一次选错100%开门，第二次换门赢得汽车），其他情况下，根据不同的x,y，赢得汽车的概率在1/3和1之间</p>
-<h2 id="6-结论"><a href="#6-结论" class="headerlink" title="6.结论"></a>6.结论</h2><p>如果你是参赛者，并且希望赢走汽车，为了提高成功率一定要提前知道 Monty Hall 的策略（根据节目历史估算 x, y）</p>
-<p>如果你不知道该不该参加节目，可以通过 <strong>汽车价格</strong> × <strong>上面的概率</strong> 计算<strong>期望值</strong>，如果期望值大于入场门票价格，那么，大量参加节目是稳赚不赔的（当然在 Monty Hall 不会针对你多次竞猜而改变策略前提下）。事实上，2005年2月，美国的某一个彩票品种由于设计不周，真的出现过稳赚不赔的情况，被麻省理工一名学生发现并通过反复购买赚到了300万美元。<a href="http://www.ruanyifeng.com/blog/2018/04/lottery-mathematics.html" target="_blank" rel="noopener">链接</a></p>
+<h1 id="6-结论"><a href="#6-结论" class="headerlink" title="6.结论"></a>6.结论</h1><p>如果你是参赛者，并且希望赢走汽车，为了提高成功率一定要提前知道 Monty Hall 的策略（根据节目历史估算 x, y）</p>
+<p>如果你不知道该不该参加节目，可以通过 <strong>汽车价格</strong> × <strong>上面的概率</strong> 计算 <strong>期望值</strong>，如果期望值大于入场门票价格，那么，大量参加节目是稳赚不赔的（当然在 Monty Hall 不会针对你多次竞猜而改变策略前提下）。事实上，2005年2月，美国的某一个彩票品种由于设计不周，真的出现过稳赚不赔的情况，被麻省理工一名学生发现并通过反复购买赚到了300万美元。<a href="http://www.ruanyifeng.com/blog/2018/04/lottery-mathematics.html" target="_blank" rel="noopener">链接</a></p>
 <p>那么转换思维，如果你是 Monty Hall 呢，你当然不希望参赛者轻松的赢走门后的汽车，应该怎么做？</p>
 <p>短期做法：</p>
 <ul>
@@ -172,20 +135,18 @@
 </ul>
 <p>长期做法：</p>
 <ul>
-<li>保持x&gt;=2y，即参赛者第一次选对情况下打开另一扇门，提供换门机会的概率，要大于等于选错情况下提供换门机会的2倍（保持2倍关系即可，相差再大不会影响效果，反而可能会被诟病）。这种情况下任凭参赛者再聪明，也无法奈何，只有1/3的概率赢走汽车。</li>
+<li>保持x&gt;=2y，即参赛者第一次选对下打开另一扇门，提供换门机会的概率，要大于等于选错情况下提供换门机会的2倍（保持2倍关系即可，相差再大不会影响效果，反而可能会被诟病）。这种情况下任凭参赛者再聪明，也无法奈何，只有1/3的概率赢走汽车。</li>
 </ul>
-<p>最后吐槽一下 hexo 对 mathjax 的渲染，换了三个引擎均是测试时正常，部署无效。文中数学公式最终做成了图片格式。</p>
-<p>本文完。原创文章，如需转载，请注明来源。</p>
-<p>评论功能尚未开通，如需联系作者：zijian@outlook.de</p>
+<p>本文完，原创文章，如需转载，请注明来源。</p>
+<p>我开通了<strong>简书</strong>，今后将同步更新个人作品，<a href="https://www.jianshu.com/p/b26b0af4c573" target="_blank" rel="noopener">快去</a>参与评论吧</p>
+<p>如需联系作者：zijian@outlook.de</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zijian.studio/2018/05/11/Monty-Hall-problem/" data-id="cjh51qof900053ss7onopi5af" class="article-share-link">Share</a>
+      <a data-url="http://zijian.studio/2018/05/11/Monty-Hall-problem/" data-id="cjh93zlzr0000vos73d1ynz8o" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/概率/">概率</a></li></ul>
-
     </footer>
   </div>
   
@@ -220,7 +181,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zijian.studio/2018/05/10/十二平均律与巴赫/" data-id="cjh51qof400023ss7j8iehj5t" class="article-share-link">Share</a>
+      <a data-url="http://zijian.studio/2018/05/10/十二平均律与巴赫/" data-id="cjh93zm060001vos7n9uql40h" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/音乐/">音乐</a></li></ul>
@@ -267,7 +228,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zijian.studio/2018/05/10/hello-world/" data-id="cjh51qof100013ss7r428diem" class="article-share-link">Share</a>
+      <a data-url="http://zijian.studio/2018/05/10/hello-world/" data-id="cjh93zm1h0007vos72ghygc5l" class="article-share-link">Share</a>
       
       
     </footer>
@@ -290,7 +251,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/概率/">概率</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/音乐/">音乐</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/音乐/">音乐</a></li></ul>
     </div>
   </div>
 
@@ -300,7 +261,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/概率/" style="font-size: 10px;">概率</a> <a href="/tags/音乐/" style="font-size: 10px;">音乐</a>
+      <a href="/tags/音乐/" style="font-size: 10px;">音乐</a>
     </div>
   </div>
 
@@ -322,7 +283,7 @@
       <ul>
         
           <li>
-            <a href="/2018/05/11/Monty-Hall-problem/">不要小瞧了 Monty Hall problem(三门问题)</a>
+            <a href="/2018/05/11/Monty-Hall-problem/">(no title)</a>
           </li>
         
           <li>
