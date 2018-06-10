@@ -17,7 +17,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://zijian.studio/2018/06/11/Modern-Crypto-Basis/Four-rotor-enigma.jpg">
 <meta property="og:image" content="http://zijian.studio/2018/06/11/Modern-Crypto-Basis/NetEase-key.jpg">
-<meta property="og:updated_time" content="2018-06-10T18:57:06.340Z">
+<meta property="og:updated_time" content="2018-06-10T18:59:40.454Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="现代加密简介：MD5&#x2F;AES&#x2F;RSA&#x2F;HTTPS">
 <meta name="twitter:description" content="1.计算机出现以前的密码这篇文章旨在浅显易懂的介绍标题所述的各个算法概念与应用，文中没有数学公式。在主要概念出现之前，先简谈一下密码发展史的几个重要时期。 计算机出现之前，加密算法主要有“替换加密”，“移位加密”，“维吉尼亚密码”等。 著名的凯撒密码就是最简单的“替换加密”，密文每个字母相对原文向后移动3位，例如：  ATTACK AT THREE AM TOMORROW  加密后就变成了  DW">
@@ -111,7 +111,7 @@
 <h1 id="2-编码（Hex，Base64，Urlencode）"><a href="#2-编码（Hex，Base64，Urlencode）" class="headerlink" title="2.编码（Hex，Base64，Urlencode）"></a>2.编码（Hex，Base64，Urlencode）</h1><p>这些算法不能算作加密，只能称之为“编码”。因为编码和解码算法都是公开一致的，编码后的文本只是人类不熟悉的计算机语言而已。</p>
 <p>计算机出现后，信息保存在磁盘中。由于计算机只能识别二进制0和1，需要制定一套方案用来保存文字信息。ASCII码表，雏形形成于1963年，用7 bit，一共2^7^=128种编码表示数字，英文，和标点符号，随后扩展到8 bit，新增了ä, ö, ü, ß等西欧字符。早期IBM推崇的1字节=8 bit 概念此时已经根深蒂固，因为对大部分欧美国家，1字节就是1个字母或1个标点。</p>
 <p>对非英语国家，如中国，在1980颁布GB2312编码规格，用两字节2^16^=65535种编码，表示七千多个简体字和字符。1995年又颁布了GBK，在兼容前者基础上，新增了繁体字和部分日韩文字。</p>
-<p>世界上常用的几十种语言，如果每个国家都有一套自己的编码方案，跨国通信是很困难的，这时Unicode出现。Unicode选择4字节 2^32=4294967296 这么多种编码，足够保存世界上所有语言还绰绰有余。四字节直接保存的结果是UTF-32，名称源于4字节=32 bit。虽然编码统一问题解决了，但这对于大部分英语国家而言是极其浪费空间的。本来人家1个字母1字节就够，现在要扩大到4倍！于是又有了UTF-8，可以理解为UTF-8是Unicode存储时压缩后的“可变长”编码。英语部分不变，UTF-8完全兼容ASCII；非英语字符占2-4个字符，达到了统一与节省的平衡。</p>
+<p>世界上常用的几十种语言，如果每个国家都有一套自己的编码方案，跨国通信是很困难的，这时Unicode出现。Unicode选择4字节 2^32^=4294967296 这么多种编码，足够保存世界上所有语言还绰绰有余。四字节直接保存的结果是UTF-32，名称源于4字节=32 bit。虽然编码统一问题解决了，但这对于大部分英语国家而言是极其浪费空间的。本来人家1个字母1字节就够，现在要扩大到4倍！于是又有了UTF-8，可以理解为UTF-8是Unicode存储时压缩后的“可变长”编码。英语部分不变，UTF-8完全兼容ASCII；非英语字符占2-4个字符，达到了统一与节省的平衡。</p>
 <p>二进制01序列为了表示方便，书写时通常选择16进制，即Hex。</p>
 <p>以中文为例，“你好”在经过utf-8编码后是，</p>
 <div class="table-container">
@@ -342,7 +342,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zijian.studio/2018/06/11/Modern-Crypto-Basis/" data-id="cji96xndh0002gss7jphgggvq" class="article-share-link">Share</a>
+      <a data-url="http://zijian.studio/2018/06/11/Modern-Crypto-Basis/" data-id="cji970s2900016cs7c6vsvp8s" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/密码/">密码</a></li></ul>
@@ -464,21 +464,6 @@
 
 
 
-  </div>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 </html>
