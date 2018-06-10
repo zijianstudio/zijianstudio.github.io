@@ -17,7 +17,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://zijian.studio/2018/06/11/Modern-Crypto-Basis/Four-rotor-enigma.jpg">
 <meta property="og:image" content="http://zijian.studio/2018/06/11/Modern-Crypto-Basis/NetEase-key.jpg">
-<meta property="og:updated_time" content="2018-06-10T18:55:08.119Z">
+<meta property="og:updated_time" content="2018-06-10T18:57:06.340Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="现代加密简介：MD5&#x2F;AES&#x2F;RSA&#x2F;HTTPS">
 <meta name="twitter:description" content="1.计算机出现以前的密码这篇文章旨在浅显易懂的介绍标题所述的各个算法概念与应用，文中没有数学公式。在主要概念出现之前，先简谈一下密码发展史的几个重要时期。 计算机出现之前，加密算法主要有“替换加密”，“移位加密”，“维吉尼亚密码”等。 著名的凯撒密码就是最简单的“替换加密”，密文每个字母相对原文向后移动3位，例如：  ATTACK AT THREE AM TOMORROW  加密后就变成了  DW">
@@ -335,11 +335,14 @@
 </ol>
 <p>这时黑客能否故伎重演？尝试用自己的公钥替换CA的公钥，用自己的私钥伪造一份Bob的证书？理论上，如果黑客技术够高，发现了CA公司存在的漏洞，确实可以办到，HTTPS也不是百分百安全的。但上面提到的数字证书中心：Symantec, Comodo 都是世界一流互联网安全公司。不仅如此，操作系统和浏览器在安装时，已经内置了根证书公钥，顶级根证书由操作系统TLS模块负责维护其安全。在多重保险下想替换CA公钥绝不是件容易的事情。</p>
 <p>与上面的担心相比，CA中心是否应该被绝对信任，相对更需要关注。早年CNNIC就被指控在用户不知情情况下下载软件，且滥发证书等恶劣行为，导致被谷歌和火狐等部分浏览器吊销其根证书。但即使是形象良好的CA公司，其权限过大也不是大家愿意看到的，区块链技术应景而生，区块链技术不需要中心认证，而比特币则是该技术应用最成功的例子。世界各处矿工们保存着同一个数据库副本，即使某个人篡改了记录，其他大多数人的记录是保持不变的，在同步数据时，与多数不一样的数据就会被认为不正常从而被舍弃。</p>
+<p>本文完，原创文章，如需转载，请注明来源。</p>
+<p>我开通了<strong>简书</strong>，今后将同步更新个人作品，<a href="https://www.jianshu.com/p/f9acf8133e79" target="_blank" rel="noopener">快去</a>参与评论吧</p>
+<p>如需联系作者：zijian@outlook.de</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zijian.studio/2018/06/11/Modern-Crypto-Basis/" data-id="cji96s5ia00006gs7hh26szxb" class="article-share-link">Share</a>
+      <a data-url="http://zijian.studio/2018/06/11/Modern-Crypto-Basis/" data-id="cji96xndh0002gss7jphgggvq" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/密码/">密码</a></li></ul>
@@ -461,6 +464,21 @@
 
 
 
-  </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 </html>
