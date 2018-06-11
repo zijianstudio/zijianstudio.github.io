@@ -15,13 +15,13 @@
 <meta property="og:site_name" content="ZIJIAN的网络博客">
 <meta property="og:description" content="1.计算机出现以前的密码这篇文章旨在浅显易懂的介绍标题所述的各个算法概念与应用，文中没有数学公式。在主要概念出现之前，先简谈一下密码发展史的几个重要时期。 计算机出现之前，加密算法主要有“替换加密”，“移位加密”，“维吉尼亚密码”等。 著名的凯撒密码就是最简单的“替换加密”，密文每个字母相对原文向后移动3位，例如：  ATTACK AT THREE AM TOMORROW  加密后就变成了  DW">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://zijian.studio/2018/06/11/Modern-Crypto-Basis/Four-rotor-enigma.jpg">
-<meta property="og:image" content="http://zijian.studio/2018/06/11/Modern-Crypto-Basis/NetEase-key.jpg">
-<meta property="og:updated_time" content="2018-06-10T18:59:40.454Z">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/12155313-6b0298cf66957fbf.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/12155313-889f82af074160af.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2018-06-11T14:33:07.200Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="现代加密简介：MD5&#x2F;AES&#x2F;RSA&#x2F;HTTPS">
 <meta name="twitter:description" content="1.计算机出现以前的密码这篇文章旨在浅显易懂的介绍标题所述的各个算法概念与应用，文中没有数学公式。在主要概念出现之前，先简谈一下密码发展史的几个重要时期。 计算机出现之前，加密算法主要有“替换加密”，“移位加密”，“维吉尼亚密码”等。 著名的凯撒密码就是最简单的“替换加密”，密文每个字母相对原文向后移动3位，例如：  ATTACK AT THREE AM TOMORROW  加密后就变成了  DW">
-<meta name="twitter:image" content="http://zijian.studio/2018/06/11/Modern-Crypto-Basis/Four-rotor-enigma.jpg">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/12155313-6b0298cf66957fbf.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
   
     <link rel="alternate" href="/atom.xml" title="ZIJIAN的网络博客" type="application/atom+xml">
   
@@ -102,12 +102,12 @@
 </blockquote>
 <p>加密后就变成了</p>
 <blockquote>
-<p>DWWDFN DV WKUHH DP WRPRUURZ</p>
+<p>DWWDFN DW WKUHH DP WRPRUURZ</p>
 </blockquote>
-<p>复杂的替换加密会将26个字母都替换成另一个不同字母。解密时需要知道加密进行的操作，即字母是如何替换的。在这里，字母替换表称为密钥，可能的替换方案越多，密钥空间越大，则越不易被破解，对于26个字母，不重复的替代方案有26!大约4×10^26^种！</p>
+<p>复杂的替换加密会将26个字母都替换成另一个不同字母。解密时需要知道加密进行的操作，即字母是如何替换的。在这里，字母替换表称为密钥，可能的替换方案越多，密钥空间越大，则越不易被破解，对于26个字母，不重复的替代方案有26! 大约4×10^26^种！</p>
 <p>替换加密尽管有很大的密钥空间，但存在一个致命弱点：一种语言中每个字母出现的频率是固定的。例如英语中e是最常见的字母，如果使用替换加密，那密文里最常见的字母很可能原文就是e！此外，单词首字母频率最高的是t；th，he，in等组合字母出现次数也要比其他字母组合频繁的多。所以当时经验丰富的密码师可以很容易破译这类加密。1587年，苏格兰玛丽女王使用这种方法加密“暗杀英格兰伊丽莎白女王计划”，但不幸内容被破译引来处刑。</p>
 <p>二战时期德军著名密码机“谜团”（Enigma）将“替换加密”发展到极致，是计算机出现前最复杂的加密方式。这种机器类似打字机，敲入明文可以直接显示密文（通过亮灯）；反之，如果知道密钥能正确连线和摆放转轮，敲入密文也可以直接还原明文。Enigma的复杂之处在于机器上的3-4个转轮，每输入一个字母，其中一个转轮就会旋转一格，类似汽车里程表。当转动一圈后，第二个转轮会转动一格，第二个转轮转动一圈后，第三个转轮再转动一格。而替换方案由全部转轮的位置来决定。这表示，虽然本质仍是替换加密，但替换方案是变化的。原文中出现第一个e和第二个e加密后不一定相同。但即使是这样，对岸的英国破译小组，在几百个数学家努力下（其中包括计算机之父—艾伦·图灵），仍然破译了大量密码，从而提前结束了战争。</p>
-<p><img src="/2018/06/11/Modern-Crypto-Basis/Four-rotor-enigma.jpg" alt="二战德军4转轮谜团机，图片来源于wikipedia"> </p>
+<p><img src="https://upload-images.jianshu.io/upload_images/12155313-6b0298cf66957fbf.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="二战德军4转轮谜团机，图片来源于wikipedia"> </p>
 <h1 id="2-编码（Hex，Base64，Urlencode）"><a href="#2-编码（Hex，Base64，Urlencode）" class="headerlink" title="2.编码（Hex，Base64，Urlencode）"></a>2.编码（Hex，Base64，Urlencode）</h1><p>这些算法不能算作加密，只能称之为“编码”。因为编码和解码算法都是公开一致的，编码后的文本只是人类不熟悉的计算机语言而已。</p>
 <p>计算机出现后，信息保存在磁盘中。由于计算机只能识别二进制0和1，需要制定一套方案用来保存文字信息。ASCII码表，雏形形成于1963年，用7 bit，一共2^7^=128种编码表示数字，英文，和标点符号，随后扩展到8 bit，新增了ä, ö, ü, ß等西欧字符。早期IBM推崇的1字节=8 bit 概念此时已经根深蒂固，因为对大部分欧美国家，1字节就是1个字母或1个标点。</p>
 <p>对非英语国家，如中国，在1980颁布GB2312编码规格，用两字节2^16^=65535种编码，表示七千多个简体字和字符。1995年又颁布了GBK，在兼容前者基础上，新增了繁体字和部分日韩文字。</p>
@@ -253,7 +253,7 @@
 <h1 id="3-信息摘要算法（MD5，SHA256，HMAC）"><a href="#3-信息摘要算法（MD5，SHA256，HMAC）" class="headerlink" title="3.信息摘要算法（MD5，SHA256，HMAC）"></a>3.信息摘要算法（MD5，SHA256，HMAC）</h1><p>信息摘要（Message Digest），同义词有散列，哈希（Hash），可以理解为特征缩影，例如，这篇文章的摘要可以是：<strong><em>现代加密简介：MD5/AES/RSA/HTTPS</em></strong>。要判断两个东西是否相等，首先应该判断同一算法下的摘要是否相等。如果摘要相等，内容不一定相等；但如果摘要不相等，则内容一定不相等。</p>
 <p>信息摘要扮演着十分重要的角色，是许多类型的实现原理，如LinkedList，HashTable，Dictionary，数据库索引，等等。在C#中，如果遇到需要重写Equals()的时候，一定也要重写GetHashCode()，因为比较摘要是否相等总是第一位的。在GetHashCode()相同时，才去继续调用Equals()函数。摘要算法设计的好，比较效率会提高许多。</p>
 <p>经典Hash算法有很多，通过加，减，移位，还有诸多以提出者命名的算法。这里仅列举一个移位Hash做例子：</p>
-<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">rotatingHash</span><span class="params">(message, prime=<span class="number">31</span>)</span>:</span></span><br><span class="line">   hashCode = len(message)</span><br><span class="line">   <span class="keyword">for</span> i <span class="keyword">in</span> range(len(message)):</span><br><span class="line">       hashCode = (hashCode&lt;&lt;<span class="number">4</span>)^(hashCode&gt;&gt;<span class="number">28</span>)^ord(message[i])</span><br><span class="line">   <span class="keyword">return</span> hashCode</span><br></pre></td></tr></table></figure>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">rotatingHash</span><span class="params">(message, prime)</span>:</span></span><br><span class="line">   hashCode = len(message)</span><br><span class="line">   <span class="keyword">for</span> i <span class="keyword">in</span> range(len(message)):</span><br><span class="line">       hashCode = (hashCode&lt;&lt;<span class="number">4</span>)^(hashCode&gt;&gt;<span class="number">28</span>)^ord(message[i])</span><br><span class="line">   <span class="keyword">return</span> hashCode % prime</span><br></pre></td></tr></table></figure>
 <p>摘要算法严格来讲也不能被称为加密，以为其是单向的，没有解密算法，信息无法被还原。这类算法中，目前比较流行的有MD5，和SHA256算法。md5()函数将一切字节大小的数据，映射到128 bit 的结果集，有2^128^个值。转为HEX后是32位字符串。不同内容在md5运算后碰撞概率发生极低。而SHA256会映射到256 bit 结果集，更大大降低了碰撞概率。</p>
 <blockquote>
 <p>md5(‘123456’) = e10adc3949ba59abbe56e057f20f883e<br>md5(‘123457’) = f1887d3f9e6ee7a32fe5e76f4ab80d63</p>
@@ -267,7 +267,7 @@
 <li><p>在智能手机出现前，早期网游为了保护用户账号安全，会推出一款叫做“将军令”的设备，游戏登陆时不仅需要账号密码，还要输入设备上的六位数字，数字每分钟更换一次，所以大大增加了安全系数。其原理十分简单：只需要内置时钟和一个专门计算散列的硬件即可。对 <em>当前日期时间精确到分</em> 和 <em>绑定的用户账号</em> 作散列运算得到6为数字，服务器上保留一份同样的散列算法，这样登陆时就可以判断两个数字是否相等，而且这个过程不需要网络。将军令的寿命取决于内置时钟的误差精度，如果一年以后这个时间误差超过了一分钟，那这个设备就不能继续使用了。智能手机出现后，类似实现原理被转移到了手机上。由于联网的手机可以实时同步时间，所以寿命是永久的。</p>
 </li>
 </ul>
-<p><img src="/2018/06/11/Modern-Crypto-Basis/NetEase-key.jpg" alt="中国某网游将军令，图片来源于网络"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/12155313-889f82af074160af.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="中国某网游将军令，图片来源于网络"></p>
 <p>散列运算是单向的，被加密的信息无法还原，所以极适合用来保存用户隐私信息。如密码，只需用户本人知道，哪怕系统维护人员也不应该得知。最简单的实现方法就是：用户注册时，数据库保存user_id和md5(password)；用户登陆时，对输入密码做md5运算并和数据库做比较。</p>
 <p>尽管无法完全破解，但黑客们如果获取到e10adc3949ba59abbe56e057f20f883e这样的常见散列，也会知道是原密码是123456。如果有人宣称可以解密MD5，那么其原理都是在一张表上记录了大量的<strong>原文</strong>—<strong>密文</strong>，数据可以占到几千TB甚至更大空间，称为<strong>彩虹表</strong>。纯数字和简单如qwerasdf这种密码，是很容易反推的。于是又出现了md5(md5(password))，和md5(sha256(password))这类换汤不换药的混合运算。</p>
 <p>真正有效防止彩虹表破译的做法是在MD5散列计算前，对密码“加盐”（英文Salt），不再保存md5(password)，而用salt和md5(password+salt)代替。每个人注册时会产生一个随机字符串，称为<em>盐</em>，和原密码混淆后再进行md5运算，由于每个人的salt是随机的，即使很多用户同时使用123456作为密码，数据库记录的加盐密码散列也是不一样的。想通过salt和md5(password+salt)反推password极其困难。那么password和salt如何混合可以达到最佳反破译效果？和设计MD5和SHA256思想类似，HMAC(message,salt)函数是当前比较流行的算法。</p>
@@ -295,11 +295,11 @@
 </blockquote>
 <p>这个密文是绝对安全的，只有当密文和密钥再做一次异或运算，才能还原回“你好”。不同的48 bit密钥，可以解密出不同两个汉字的组合，如“祖国”，“我们”，当然也可能是乱码。</p>
 <p>1977年代IBM和NSA两家公司提出数据加密标准（Data Encryption Standard），简称DES，DES采用了64 bit长度二进制作为密钥，但其中8 bit是校验位，实际有效位数只有56 bit，即2^56^种不同密钥。以当时的计算机能力，56 bit 也可谓是绝对安全的。但随着CPU（GPU）计算能力越来越强，2000年前后，已经有专门的硬件能在22小时内破解出DES的正确密钥，这意味着DES已经不再安全。</p>
-<p>2001年出现的美国征集新算法，命名为高级加密标准（Advanced Encryption Standard），简称AES，经过筛选，最终选定了两位比利时密码学家的Rijndael算法。AES可以选三种密钥，分别是128 bit, 192 bit 和256 bit。即使选择最小的128位密钥，其安全系数也是DES的4.72×10^21^倍，如果这个数字不够形象，可以假设目前有一台机器，破解DES只需要1秒钟，让它来破解AES则需要大约1496468亿年！</p>
+<p>2001年美国开始征集新算法，命名为高级加密标准（Advanced Encryption Standard），简称AES，经过筛选，最终选定了两位比利时密码学家的Rijndael算法。AES可以选三种密钥，分别是128 bit, 192 bit 和256 bit。即使选择最小的128位密钥，其安全系数也是DES的4.72×10^21^倍，如果这个数字不够形象，可以假设目前有一台机器，破解DES只需要1秒钟，让它来破解AES则需要大约1496468亿年！</p>
 <p>不论DES还是AES实现都相当复杂，<a href="https://en.wikipedia.org/wiki/Advanced_Encryption_Standard" target="_blank" rel="noopener">Wikipedia</a>上有详细原理，这里不做详述。好在绝大多数高级编程语言都内置了Crypto模块，可以方便我们直接调用而不必关心实现原理。另外，这两种加密方式也是对bit位加密的，意味着“你好”在GBK和UTF-8下的密文是不一样的。密文是若干字节的二进制序列，为了阅读，存储和传输方便，常用办法是转为Hex，长度缩减为原来1/4；另一种方法是用上面说过的Base64编码，长度可以缩减到为原来1/6；</p>
 <h1 id="5-非对称加密（RSA）"><a href="#5-非对称加密（RSA）" class="headerlink" title="5.非对称加密（RSA）"></a>5.非对称加密（RSA）</h1><p>AES加密在今天仍然十分安全，只要密钥够复杂，几乎可以看作不可破解，但却存在一个新的问题：<em>密钥如何传递？</em></p>
 <p>密钥是不可能明文传递的，否则密钥被截获那一切都白费了。如果把密钥加密，用于其加密的密钥又怎么传输呢？对于固定通信的两个单位，可以先私下制定密钥，甚至制定密钥日历，每天更换新的密钥。传统网银U盾，和一些CA的U Key都是这种情况下的产物，但对于节奏飞快的互联网时代来说，这无疑是反人类的。你会为了注册某个账号跑到对方公司去领一个Key吗？</p>
-<p>早在1976年，Diffie和Hellman两人发表<em>密钥交换</em>的概念，其支持在不安全的信道上传输密钥，其原理如下：</p>
+<p>早在1976年，Diffie和Hellman两人发表<em>密钥交换</em>的概念，其支持在不安全的信道上传输密钥，原理如下：</p>
 <ul>
 <li>在数学中找到单向函数 a + b = c，即知道 a, b 计算 c 很容易，但知道 c 和其中一项，想计算另一项很困难(这里的+号，不是数学相加，仅代表某种运算符)。</li>
 <li>满足交换率和结合律：(a + b) + c = (c + b) + a</li>
@@ -313,7 +313,7 @@
 <li>窃听者得到：B，M，(B^x^ mod M)，(B^y^ mod M)，根据这些是没有能力计算出密钥，从而无法破解之后的加密信息。</li>
 </ol>
 <blockquote>
-<p>试想：27303594784432036767^??^ mod 39540592690228530645 = 5105659384789281863 想反算秘密指数是多少，几乎是不可能的。<br>幂模运算存在快速算法，实际并不需要去计算第一个超大的幂指数。</p>
+<p>试想：27303594784432036767^??^ mod 39540592690228530645 = 5105659384789281862 想反算秘密指数是多少，几乎是不可能的。<br>幂模运算存在快速算法，实际并不需要去计算第一个超大的幂指数。</p>
 </blockquote>
 <p>1977年，Rivest, Shamir, Adleman 三人在幂模运算基础上，提出了新型算法，以他们三人命名为RSA。现如今安全型http，即https，目前流行的比特币都是基于此原理。</p>
 <p>RSA算法中，存在一对密钥，公钥Public Key和私钥Private Key，私钥由保管者拥有，公钥发布给其他人，信息用公钥加密后，只能通过私钥解密，所以是“非对称”的。同样私钥加密后也可以通过公钥解密，可以证明信息确实由私钥拥有着所发。</p>
@@ -342,7 +342,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zijian.studio/2018/06/11/Modern-Crypto-Basis/" data-id="cji970s2900016cs7c6vsvp8s" class="article-share-link">Share</a>
+      <a data-url="http://zijian.studio/2018/06/11/Modern-Crypto-Basis/" data-id="cjiacyg8i0004g4s7813ljokg" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/密码/">密码</a></li></ul>
@@ -464,6 +464,21 @@
 
 
 
-  </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 </html>
